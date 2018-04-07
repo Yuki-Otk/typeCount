@@ -1,0 +1,203 @@
+﻿<!--
+    2017/11/01 HumanInterface
+    type.html
+    YukiOtake u276041 
+-->
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Counter</title>
+    <link rel="stylesheet" href="./type.css">
+    <script type="text/javascript" src="./type.js"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", {
+            packages: ["corechart"]
+        });
+        google.charts.setOnLoadCallback(drawChartFinger);
+        google.charts.setOnLoadCallback(drawChartFloor);
+    </script>
+</head>
+
+<body>
+
+    <h2>タッチタイピングにおける各指の使用頻度を概算するプログラム</h2>
+    <h3> (任意の英文を読み込み、各指[とKBの各段]の使用頻度の系統をとるプログラム)</h3>
+    <p>
+        <b>YukiOtake</b>
+        <br/>表示が変な場合は縮小することをお勧めします。
+    </p>
+    <form id="form">
+        <textarea id="input" cols="200" rows="10" placeholder="テキストを入力してください(半角英数字のみ可能)" autofocus onkeyup="textJudge()"></textarea>
+        <div class="boxContainer">
+            <div class="box">
+                <table border="1">
+                    <caption>
+                        <strong>各指の使用表</strong>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>手(回数/割合)/指</th>
+                            <th>親指</th>
+                            <th>人差し指</th>
+                            <th>中指</th>
+                            <th>薬指</th>
+                            <th>小指</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <label id="r">右手</label>
+                            </th>
+                            <td>
+                                <label id="r1">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="r2">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="r3">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="r4">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="r5">X回/Y%</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label id="l">左手</label>
+                            </th>
+                            <td>
+                                <label id="l1">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="l2">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="l3">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="l4">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="l5">X回/Y%</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label id="fingerSum">合計</label>
+                            </th>
+                            <td>
+                                <label id="fingerSum1">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="fingerSum2">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="fingerSum3">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="fingerSum4">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="fingerSum5">X回/Y%</label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="fingerChart" style="width: 900px; height: 500px;"></div>
+            </div>
+            <div class="box">
+                <table border="1">
+
+                    <caption>
+                        <strong>各段の使用表</strong>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>手(回数/割合)/指</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <label id="floorR">右手(X回/Y%)</label>
+                            </th>
+                            <td>
+                                <label id="floorR1">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="floorR2">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="floorR3">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="floorR4">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="floorR5">X回/Y%</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label id="floorL">左手(X回/Y%)</label>
+                            </th>
+                            <td>
+                                <label id="floorL1">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="floorL2">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="floorL3">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="floorL4">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="floorL5">X回/Y%</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label id="floorSum">左手(X回/Y%)</label>
+                            </th>
+                            <td>
+                                <label id="floorSum1">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="floorSum2">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="floorSum3">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="floorSum4">X回/Y%</label>
+                            </td>
+                            <td>
+                                <label id="floorSum5">X回/Y%</label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="floorChart" style="width: 900px; height: 500px;"></div>
+            </div>
+
+        </div>
+
+    </form>
+</body>
+
+</html>

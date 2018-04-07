@@ -1,0 +1,10 @@
+.boxContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.box {
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
