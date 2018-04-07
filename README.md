@@ -1,13 +1,13 @@
-# タッチタイピングにおける各指の使用頻度を概算するプログラム
+# タッチタイピングにおける各指の使用頻度を概算する
 - 作成者:YukiOtake
-- git:
+- git:https://github.com/Yuki-Otk/typeCount
 - OS: Windwos10Home
 - Editer: Visual Studio Code
 - 使用言語: HTML,JavaScript,CSS
 - 使用API:GoogleChartAPI
 - 実行環境: (動作確認済み)
-- Google Chrome ver(65.0.3325.181)
-- Microsoft Edge ver(41.16299.248.0)
+    - Google Chrome ver(65.0.3325.181)
+    - Microsoft Edge ver(41.16299.248.0)
 ---
 ## ファイル一覧
 |ファイル名|概要|
@@ -28,4 +28,4 @@
 - また、入力文字については1バイト文字のみ(日本語不可)を判定とする。(入力されたものは無視)
 ## 考察
 - レポートとして提出した考察のみを抜き出したPDFを参照することとする。
-- [PDFリンク]()
+- [PDFリンク](https://github.com/Yuki-Otk/typeCount/blob/master/%E8%80%83%E5%AF%9F.pdf)
