@@ -15,7 +15,7 @@
 |type.html|任意の文字列を入力し、結果を表示する|
 |type.js|文字列を解析しどの指が使用されたのか判定する|
 |type.css|`type.html` のレイアウト調整|
-|type.jpg|参考資料:[ちびむすドリル」ホームポジション](http://happylilac.net/sy-keyboard03.html)|
+|type.jpg|参考資料:[「ちびむすドリル」ホームポジション](http://happylilac.net/sy-keyboard03.html)|
 |考察.pdf|レポートの考察部のみを抜き出したもの|
 ## 概要(仕様)
 - ***本プログラムは大学でレポートとして提出したものを少し修正したものである***
