@@ -27,5 +27,4 @@
     - 例:Aをタイプしたい場合は右小指でaと左小指でshiftを同時にタイプ
 - また、入力文字については1バイト文字のみ(日本語不可)を判定とする。(入力されたものは無視)
 ## 考察
-- レポートとして提出した考察のみを抜き出したPDFを参照することとする。
-- [PDFリンク](https://github.com/Yuki-Otk/typeCount/blob/master/%E8%80%83%E5%AF%9F.pdf)
+- レポートとして提出した考察のみを抜き出したPDFを参照することとする。 [PDFリンク](https://github.com/Yuki-Otk/typeCount/blob/master/%E8%80%83%E5%AF%9F.pdf)
